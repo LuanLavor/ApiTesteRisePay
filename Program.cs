@@ -27,6 +27,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Permite arquivos estáticos da pasta wwwroot
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
