@@ -20,8 +20,11 @@ namespace ApiTesteRisePay.Classes
         public decimal value { get; set; }
     }
 
+<<<<<<< HEAD
     // Classe que vai desserializar o JSON todo
-       
+=======
+    // Classe auxiliar para desserializar o JSON completo
+>>>>>>> b410f9b (Adicionar arquivos de projeto.)
     public class RisePayApiResponse
     {
         [JsonProperty("object")]
@@ -97,8 +100,11 @@ namespace ApiTesteRisePay.Classes
             if (!response.IsSuccessStatusCode)
                 throw new Exception($"Erro ao gerar PIX: {response.StatusCode} - {responseContent}");
 
+<<<<<<< HEAD
             // Desserializa o JSON "aninhado" da RisePay
-
+=======
+            // Desserializa o JSON aninhado da RisePay
+>>>>>>> b410f9b (Adicionar arquivos de projeto.)
             var apiResponse = JsonConvert.DeserializeObject<RisePayApiResponse>(responseContent);
 
             return new PixResponse
@@ -108,8 +114,11 @@ namespace ApiTesteRisePay.Classes
             };
         }
 
-
+<<<<<<< HEAD
         // Esse gera o QR Code em Base64
+=======
+        // Helper para gerar QR Code em Base64
+>>>>>>> b410f9b (Adicionar arquivos de projeto.)
         public static class QrCodeHelper
         {
             public static string GerarQrCodeBase64(string qrCodeText)
